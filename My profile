@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الشخصية</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            background-color: #6200ea;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .profile-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-info img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            border: 3px solid #6200ea;
+        }
+        .menu {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .menu-item:hover {
+            background-color: #f0f0f0;
+        }
+        .menu-item img {
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2>الصفحة الشخصية</h2>
+</div>
+
+<div class="profile-info">
+    <img src="your-profile-image.jpg" alt="صورة المستخدم">
+    <div>
+        <h3>suar name</h3>
+        <p>عدد المتابعين: <strong>99+</strong></p>
+    </div>
+</div>
+
+<div class="menu">
+    <div class="menu-item" onclick="window.location.href='shortcuts.html'">
+        <span>اختصاراتك</span>
+        <img src="shortcut-icon.png" alt="اختصارات">
+    </div>
+    <div class="menu-item" onclick="window.location.href='saved-items.html'">
+        <span>العناصر المحفوظة</span>
+        <img src="saved-icon.png" alt="محفوظات">
+    </div>
+    <div class="menu-item" onclick="window.location.href='memories.html'">
+        <span>الذكريات</span>
+        <img src="memory-icon.png" alt="ذكريات">
+    </div>
+    <div class="menu-item" onclick="window.location.href='groups.html'">
+        <span>المجموعات</span>
+        <img src="group-icon.png" alt="مجموعات">
+    </div>
+    <div class="menu-item" onclick="window.location.href='videos.html'">
+        <span>الفيديوهات</span>
+        <img src="video-icon.png" alt="فيديوهات">
+    </div>
+    <div class="menu-item" onclick="window.location.href='marketplace.html'">
+        <span>Marketplace</span>
+        <img src="marketplace-icon.png" alt="Marketplace">
+    </div>
+</div>
+
+<div class="footer">
+    <p>حقوق الطبع والنشر © 2025</p>
+</div>
+
+</body>
+</html>
