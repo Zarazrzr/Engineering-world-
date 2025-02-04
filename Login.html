@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عالم الهندسة - Engineering World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('your-background-image.jpg'); /* أضف رابط الصورة الخلفية هنا */
+            background-size: cover;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-panel {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        h2 {
+            margin: 0 0 20px;
+            font-size: 18px;
+        }
+        input[type="text"], input[type="password"], input[type="email"], input[type="tel"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            transition: border 0.3s;
+        }
+        input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+            border: 2px solid #4CAF50;
+            outline: none;
+        }
+        button {
+            background-color: #4CAF50; /* الأخضر */
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+        button:active {
+            transform: translateY(1px);
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .popup h2 {
+            margin: 0 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-panel">
+    <h1>عالم الهندسة</h1>
+    <h2>Engineering World</h2> <!-- إضافة اسم التطبيق باللغة الإنجليزية -->
+    <input type="text" id="username" placeholder="اسم المستخدم" required>
+    <input type="password" id="password" placeholder="كلمة المرور" required>
+    <button id="loginBtn">تسجيل الدخول</button>
+    <button id="registerBtn">التسجيل</button>
+</div>
+
+<div class="popup" id="popup">
+    <h2>اختر تخصص الهندسة</h2>
+    <select id="specialization">
+        <option value="" disabled selected>اختر تخصصك</option>
+        <option value="civil">الهندسة المدنية</option>
+        <option value="mechanical">الهندسة الميكانيكية</option>
+        <option value="electrical">الهندسة الكهربائية</option>
+        <option value="computer">هندسة الحاسوب</option>
+        <option value="chemical">الهندسة الكيميائية</option>
+    </select>
+    <button id="chooseBtn">اختر</button>
+</div>
+
+<script>
+    document.getElementById('loginBtn').onclick = function() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        
+        if (username === "" || password === "") {
+            alert("يرجى ملء جميع الحقول.");
+        } else {
+            alert("تم تسجيل الدخول بنجاح لـ " + username);
+            document.getElementById('popup').style.display = 'block';
+        }
+    };
+
+    document.getElementById('chooseBtn').onclick = function() {
+        const specialization = document.getElementById('specialization').value;
+        if (specialization) {
+            alert("لقد اخترت تخصص: " + specialization);
+            document.getElementById('popup').style.display = 'none';
+        } else {
+            alert("يرجى اختيار تخصص.");
+        }
+    };
+
+    document.getElementById('registerBtn').onclick = function() {
+        window.location.href = 'register.html'; // إعادة التوجيه إلى صفحة التسجيل
+    };
+</script>
+
+</body>
+</html>
+
+
+
+
